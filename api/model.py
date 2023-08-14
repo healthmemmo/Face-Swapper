@@ -6,7 +6,7 @@ from insightface.app import FaceAnalysis
 import insightface
 import matplotlib.pyplot as plt
 
-class FaceSwapper:
+class FaceSwapper:              
     def __init__(self, model_path=None):
         """
         Initialize the FaceSwapper with the path to the model.
