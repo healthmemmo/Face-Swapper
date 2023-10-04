@@ -50,6 +50,9 @@ const UploadPage = () => {
             <button type="button" onClick={removeFiles} className={`w-fit px-8 py-2.5 text-sm rounded-full border  font-bold }`}>Clear Images</button>
           </div>
         )}
+        {generatedImagesArray.length == 0 && (
+            <div className="text-center py-8 text-lg text-gray-500 font-semibold">Generated Images will Display here.</div>
+        )}
         {generatedImagesArray.slice().reverse().map((imageObj, index) => (
           <div
             key={index}

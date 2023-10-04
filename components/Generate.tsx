@@ -17,6 +17,8 @@ enum LoadingStatus {
   OnClose = 'Working with pixels',
 }
 
+
+
 export default function Generate(props: GenerateProps) {
   const { face, bg, onChange, style } = props;
   const [loading, setLoading] = useState(false);
@@ -34,8 +36,13 @@ export default function Generate(props: GenerateProps) {
     formData.append('face_to_swap', face[0]);
     formData.append('real_image', bg[0]);
 
+    const app_engine_url = "https://freshpixl-home.el.r.appspot.com/api/swap-image"
+    const url = "https://us-central1-freshpixl-home.cloudfunctions.net/swap "
+    const localUrlMobile = "http://192.168.1.12:80/api/swap-image";
+    const localUrl = "http://127.0.0.1:8000/api/swap-image";
+
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/swap-image', formData);
+      const response = await axios.post(app_engine_url, formData);
       //   setImageSrc(`data:image/png;base64,${response.data.result_image}`);
       onChange(`data:image/png;base64,${response.data.result_image}`)
     } catch (error) {

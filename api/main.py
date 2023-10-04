@@ -31,7 +31,7 @@ image_swapper = FaceSwapper("./model_source/inswapper_128.onnx")
 
 @app.get("/api/check")
 def check():
-    print(image_swapper);
+    print(image_swapper)
     return "check" 
 
 @app.post('/api/swap-image')

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Header from '@/components/Header';
 import Generate from '@/components/Generate';
 import Dropzone from "@/components/Dropzone";
+import Footer from "@/components/Footer";
 
 export function useImageState() {
   const [files, setFiles] = useState<{ face: File[] | null, bg: File[] | null }>({ face: null, bg: null });
@@ -16,7 +17,6 @@ export function useImageState() {
     setGeneratedImage(null)
 
   };
-
   const handleSetFiles = (type: string, newValue: File[] | null) => {
     setFiles(prev => ({ ...prev, [type]: newValue }));
   };
@@ -95,14 +95,17 @@ export default function Home() {
                 className="relative max-h-80 h-80 flex items-center justify-center w-full overflow-hidden rounded-xl bg-white p-2 shadow-lg"
               >
                 {/* Additional UI elements can be added here */}
-                <div className={`absolute top-0 left-0 w-full h-full z-99 p-4 bg-white/70 ${isHovering ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                <div className={`absolute top-0 left-0 w-full h-full z-99 p-4 bg-white/70 ${isHovering ? 'opacity-100' : 'opacity-0'}
+                 transition-opacity duration-300`}>
                   <a href={generatedImage} download="generated_image.png">
-                    <button className="w-full rounded-lg font-bold cursor-pointer text-center bg-black text-white px-4 py-2">Download</button>
+                    <button className="w-full rounded-lg font-bold cursor-pointer text-center bg-black text-white px-4 py-2">
+                      Download</button>
                   </a>
                 </div>
                 <img src={generatedImage} className="h-full object-cover rounded-lg" alt="Swapped Image" />
               </div>
-              <button onClick={removeFiles} className="h-10 hover:border transition-all my-2 rounded-lg w-full bg-white text-center font-bold flex items-center justify-center shadow-lg">Clear Generation</button>
+              <button onClick={removeFiles} className="h-10 hover:border transition-all my-2 rounded-lg w-full
+              bg-white text-center font-bold flex items-center justify-center shadow-lg">Clear Generation</button>
             </div>
           )}
         </div>
@@ -122,10 +125,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="p-8">
-          <h1 className="text-3xl font-bold text-center">Examples</h1>
-        </div>
+        {/*<div className="p-8">*/}
+        {/*  <h1 className="text-3xl font-bold text-center">Examples</h1>*/}
+        {/*</div>*/}
       </main>
+      <Footer/>
     </main>
   );
 }
