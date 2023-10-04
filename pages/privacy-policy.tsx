@@ -1,10 +1,8 @@
 import React from 'react';
-import Header from "../components/Header";
 
 const PrivacyPolicy = () => {
     return (
         <div className="bg-gray-100 p-6">
-            <Header/>
             <div className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
                 <h1 className="text-2xl font-semibold mb-4">Privacy Policy for Face-Mingle</h1>
 
@@ -13,7 +11,7 @@ const PrivacyPolicy = () => {
                 <div className="mt-6">
                     <h2 className="text-xl font-semibold">1. Introduction</h2>
                     <p>
-                        Welcome to Face-Mingle ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security
+                        Welcome to Face-Mingle (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;). We are committed to protecting your privacy and ensuring the security
                         of your data when you use our AI-based face-swapping service. This Privacy Policy outlines how we handle user data.
                     </p>
                     <p>
@@ -41,7 +39,7 @@ const PrivacyPolicy = () => {
                 <div className="mt-6">
                     <h2 className="text-xl font-semibold">4. Security</h2>
                     <p>
-                        We employ industry-standard security measures to protect your use of our service. However, it's important to note that
+                        We employ industry-standard security measures to protect your use of our service. However, it&apos;s important to note that
                         we do not collect or store user-generated content, and we cannot control the dissemination or use of such content once it is created.
                     </p>
                 </div>
@@ -62,7 +60,7 @@ const PrivacyPolicy = () => {
 
                 <div className="mt-6">
                     <h2 className="text-xl font-semibold">7. Contact Us</h2>
-                    <p>If you have questions or concerns regarding this Privacy Policy or the use of our service, please contact us at <a className="text-blue-500" href="mailto:shadeersadikeen@gmail.com">shadeersadikeen@gmail.com</a>.</p>
+                    <p>If you have questions or concerns regarding this Privacy Policy or the use of our service, please contact us at <a href="mailto:shadeersadikeen@gmail.com">shadeersadikeen@gmail.com</a>.</p>
                 </div>
             </div>
         </div>
