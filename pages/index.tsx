@@ -16,6 +16,7 @@ export function useImageState() {
     setGeneratedImage(null)
 
   };
+
   const handleSetFiles = (type: string, newValue: File[] | null) => {
     setFiles(prev => ({ ...prev, [type]: newValue }));
   };

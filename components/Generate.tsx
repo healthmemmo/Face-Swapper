@@ -9,6 +9,7 @@ interface GenerateProps {
   onChange: (newValue: any) => void;
   style: string;
 }
+
 enum LoadingStatus {
   Idle = 'Working on it',
   Generating = 'Wait for magic',
@@ -22,6 +23,7 @@ export default function Generate(props: GenerateProps) {
   const [loadingText, setLoadingText] = useState(LoadingStatus.Idle);
 
   const handleImageSwap = async () => {
+
     if (!face || !bg) {
       alert('Please select both face and real images.');
       return;
@@ -42,6 +44,7 @@ export default function Generate(props: GenerateProps) {
     } finally {
       setLoading(false);
     }
+    
   };
 
   useEffect(() => {
